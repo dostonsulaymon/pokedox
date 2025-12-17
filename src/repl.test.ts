@@ -1,6 +1,6 @@
 
 import { describe, expect, test } from "vitest";
-import {cleanInput} from "./cleanInput";
+import {clean_input} from "./clean_input";
 
 describe.each([
     {
@@ -8,9 +8,9 @@ describe.each([
         expected: ["hello", "world"],
     },
     // TODO: more test cases here
-])("cleanInput($input)", ({ input, expected }) => {
+])("clean_input($input)", ({ input, expected }) => {
     test(`Expected: ${expected}`, () => {
-        const actual = cleanInput(input);
+        const actual = clean_input(input);
 
         expect(actual).toHaveLength(expected.length);
         for (const i in expected) {
