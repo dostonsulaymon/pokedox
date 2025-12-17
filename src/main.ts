@@ -1,15 +1,9 @@
 import { startREPL } from "./repl.js";
-import {PokeAPI} from "./pokeapi.js";
 
 
-function main() {
-    startREPL();
+async function main() {
+    await startREPL();
 
-    const obj = new PokeAPI();
-
-    obj.fetchLocations();
-
-    obj.fetchLocation("kanto");
 }
 
-main();
+await main();

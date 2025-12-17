@@ -6,8 +6,8 @@ export interface State {
     readline: Interface;
     commands: Record<string, CLICommand>;
     pokeAPI: PokeAPI,
-    nextLocationsURL?: string;
-    previousLocationsURL?: string;
+    nextLocationsURL?: string | null;
+    previousLocationsURL?: string | null;
 
 }
 
