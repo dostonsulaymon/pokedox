@@ -1,4 +1,4 @@
-import { clean_input } from "./clean_input";
+import { clean_input } from "./clean_input.js";
 import {commandExit} from "./command_exit.js";
 import {help} from "./command_help.js";
 import {CLICommand, initState} from "./state.js";
