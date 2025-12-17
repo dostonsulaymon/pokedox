@@ -12,7 +12,7 @@ export class PokeAPI {
 
         const cached = this.cache.get<ShallowLocations>(url);
         if (cached) {
-            return cached.val;
+            return cached;
         }
 
         const response = await fetch(url);
@@ -46,5 +46,6 @@ export type ShallowLocations = {
 
 export type Location = {
     name: string;
+
 
 };
