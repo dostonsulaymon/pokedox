@@ -8,6 +8,10 @@ export type CacheEntry<T> = {
 
 export class Cache {
     #cache = new Map<string, CacheEntry<any>>();
+
+    peek(): Map<string, CacheEntry<any>> {
+        return new Map(this.#cache);
+    }
     #reapIntervalId: NodeJS.Timeout | undefined = undefined;
     #interval: number;
 
@@ -22,6 +26,7 @@ export class Cache {
 
     get<T>(key: string): T | undefined {
         const entry = this.#cache.get(key);
+        console.log(entry);
         return entry?.val;
     }
 

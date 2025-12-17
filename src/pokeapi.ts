@@ -1,4 +1,4 @@
-import {Cache} from "./pokecache";
+import {Cache} from "./pokecache.js";
 
 export class PokeAPI {
     private static readonly baseURL = "https://pokeapi.co/api/v2";
@@ -22,6 +22,8 @@ export class PokeAPI {
         const data = await response.json();
 
         this.cache.add(url, data);
+
+        console.log(`result from cache: ${this.cache.peek()}`);
 
         return data;
     }
